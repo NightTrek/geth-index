@@ -1,4 +1,4 @@
-module geth-index
+module github.com/NightTrek/geth-index
 
 go 1.20
 

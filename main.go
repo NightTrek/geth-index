@@ -5,7 +5,6 @@ import (
 
 	"github.com/ethereum/go-ethereum"
 	"github.com/ethereum/go-ethereum/common"
-	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
 
@@ -24,11 +23,11 @@ func init(db *gorm.DB) {
 // example indexer function which uses BlockTrack to find all logs related to a tracking address to find out earned tokens
 func main() {
 	log.Println("Hello World!")
-	dsn := "host=localhost user=gorm password=gorm dbname=gorm port=9920 sslmode=disable TimeZone=Asia/Shanghai"
-	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
-	if err != nil {
-		panic("failed to connect database")
-	}
+	// dsn := "host=localhost user=gorm password=gorm dbname=gorm port=9920 sslmode=disable TimeZone=Asia/Shanghai"
+	// db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
+	// if err != nil {
+	// 	panic("failed to connect database")
+	// }
 
 	bt := BlockTrack{
 		CLIENT:   nil,
